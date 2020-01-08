@@ -1,0 +1,25 @@
+
+<style>
+    #targ{
+        margin-top: 10px;
+        height: 320px;
+    }
+</style>
+<div class="col-md-3" *ngFor="let tour of tours" >
+    <div class="card " id="targ">
+        <div class="card-header">
+            {{tour.title}}
+        </div>
+        <div class="card-body">
+            <img [src]="tour.imagen" class="card-img-top">
+            <p></p>
+            <p>desde $ {{tour.precio}}</p><p>niños $ {{tour.children}}</p>
+            <div class="">
+             <button type="button" class="btn btn-primary btn-block btn-sm"
+              [routerLink]="['/tours/reserva/',tour.id]">Información</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,24 @@
+<style>
+    #targ{
+        height: 500px;
+    }
+</style>
+<div class="col-md-4" *ngFor="let hotel of hoteles" >
+    <div class="card " id="targ">
+        <div class="card-header">
+            {{hotel.title}}
+        </div>
+        <div class="card-body">
+            <img [src]="hotel.imagen" class="card-img-top">
+            <p></p>
+            <p>{{hotel.descripcion}}</p>
+            <p>desde $ {{hotel.precio}}</p><p>niños $ {{hotel.children}}</p>
+            <div class="">
+             <button type="button" class="btn btn-primary btn-sm"
+              routerLink="/tours/reserva">Reserva</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+

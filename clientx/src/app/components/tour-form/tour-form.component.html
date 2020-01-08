@@ -1,0 +1,121 @@
+
+
+
+<style>
+  #ctx{
+    margin: 10px;
+  }
+</style>
+
+  <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <form action="">
+            <div class="form-group">
+              <input type="text" name="title" [(ngModel)]="tour.title" placeholder="Title"
+               class="form-control" readonly="readonly">
+            </div>
+            <img [src]="tour.imagen" class="card-img-top">
+            <div class="form-group">
+              <textarea name="description" [(ngModel)]="tour.descripcion" rows="2" 
+              placeholder="Description" class="form-control" readonly="readonly"></textarea>
+            </div>
+            <div class="form-group">
+              <p>desde $ {{tour.precio}}</p><p>niños $ {{tour.children}}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="col-md-5 ">
+  
+
+    <div class="col-md-12" id="ctx">
+        <div class="card">
+          <div class="card-body">
+            <form action="">
+              <div class="form-group">
+                  <div class="form-row">
+                      <div class="col">
+                        <label for="exampleFormControlSelect1">Personas</label>
+                        <input type="text" name="title" [(ngModel)]="varx" placeholder="Title"
+                            class="form-control" autocomplete="off" value="1">
+                      </div>
+                      <div class="col">
+                        <label for="exampleFormControlSelect1">Niños</label>
+                        <input type="text" name="title" [(ngModel)]="vary" placeholder="Title"
+                            class="form-control" autocomplete="off" value="0">
+                      </div>
+                    </div>
+              </div>
+              <div class="form-row">
+                  <div class="col">
+                      <button class="btn btn-info btn-sm" (click)="cotizarTour()">
+                          Recotizar
+                        </button>
+                  </div>
+                  <div class="col">
+                    <label for="exampleFormControlSelect1">Total ${{totaly}}</label>
+                  </div>
+                </div>
+            
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+  <div class="card">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <h6 class="text-center">Datos del viajero</h6>
+            <div class="row">
+                <div class="col">
+                    <input type="text" name="nombre" [(ngModel)]="reserva.nombre" placeholder="Nombre"
+                    class="form-control" autocomplete="off" >
+                </div>
+                <div class="col">
+                    <input type="text" name="nombre" [(ngModel)]="reserva.apellido" placeholder="Apellido"
+                    class="form-control" autocomplete="off" >
+                </div>
+              </div>
+        </div>
+        <div class="form-group">
+            <input type="email" name="nombre" [(ngModel)]="reserva.correo" placeholder="Correo"
+            class="form-control" autocomplete="off" >
+            
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label for="exampleFormControlSelect1">Fechas</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>30/nov/2019</option><option>3/dic/2019</option>
+                    </select>
+                  </div>
+                <div class="col">
+                  <label for="exampleFormControlSelect1">Personas</label>
+                  <input type="text" name="title" [(ngModel)]="reserva.personas" placeholder="Title"
+                      class="form-control" autocomplete="off" value="0">
+                </div>
+                <div class="col">
+                  <label for="exampleFormControlSelect1">Niños</label>
+                  <input type="text" name="title" [(ngModel)]="reserva.children" placeholder="Title"
+                      class="form-control" autocomplete="off" value="0">
+                </div>
+              </div>
+        </div>
+        <button class="btn btn-primary btn-block" (click)="saveReserva()">
+          Reservar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
